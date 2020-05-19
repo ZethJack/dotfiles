@@ -1,0 +1,3 @@
+#!/bin/sh
+
+find ~/Obrázky/wallpapers -type f | shuf | sxiv -

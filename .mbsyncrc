@@ -1,0 +1,52 @@
+IMAPStore gmail-remote
+Host imap.gmail.com
+Port  993
+User jerabek.michal@gmail.com
+PassCmd "pass mutt-wizard-gmail"
+SSLType IMAPS
+AuthMech LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore gmail-local
+Subfolders Verbatim
+Path ~/.local/share/mail/gmail/
+Inbox ~/.local/share/mail/gmail/INBOX
+Flatten .
+
+Channel gmail
+Expunge Both
+Master :gmail-remote:
+Slave :gmail-local:
+Patterns *
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore fmail-remote
+Host imap.forpsi.com
+Port  993
+User zeth@zethjack.eu
+PassCmd "pass mutt-wizard-fmail"
+SSLType IMAPS
+AuthMech LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore fmail-local
+Subfolders Verbatim
+Path ~/.local/share/mail/fmail/
+Inbox ~/.local/share/mail/fmail/INBOX
+Flatten .
+
+Channel fmail
+Expunge Both
+Master :fmail-remote:
+Slave :fmail-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
