@@ -7,8 +7,8 @@
 # export TERMINAL="st"
 
 # #---Basic Definitions---# #
-set $inner_gaps 15
-set $outer_gaps 15
+set $inner_gaps 1
+set $outer_gaps 1
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
 set $stoprec --no-startup-id dmenurecord kill
@@ -18,7 +18,7 @@ set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
 
 # #---Gaps---# #
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner $inner_gaps
 gaps outer $outer_gaps
 
@@ -30,9 +30,10 @@ for_window [instance="dropdown_*"] sticky enable
 for_window [instance="dropdown_*"] scratchpad show
 for_window [instance="dropdown_tmuxdd"] resize set 625 450
 for_window [instance="dropdown_dropdowncalc"] resize set 800 300
-for_window [instance="dropdown_tmuxdd"] border pixel 3
-for_window [instance="dropdown_dropdowncalc"] border pixel 2
+for_window [instance="dropdown_tmuxdd"] border pixel 1
+for_window [instance="dropdown_dropdowncalc"] border pixel 1
 for_window [instance="dropdown_*"] move position center
+workspace_layout tabbed
 
 bar {
 	font pango:mono 10
@@ -55,7 +56,7 @@ bindsym $mod+Shift+Escape	exec --no-startup-id prompt "Exit i3?" "i3 exit"
 # bindsym $mod+BackSpace
 bindsym $mod+Shift+BackSpace	exec --no-startup-id prompt "Reboot computer?" "$reboot"
 
-bindsym $mod+grave		exec --no-startup-id dmenuunicode
+bindsym $mod+semicolon		exec --no-startup-id dmenuunicode
 ##bindsym $mod+asciitilde
 
 #STOP/HIDE EVERYTHING:
@@ -81,8 +82,8 @@ bindsym $mod+Shift+r		exec --no-startup-id winresize
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set $inner_gaps; gaps outer current set $outer_gaps
 
-bindsym $mod+y			exec $term -e calcurse
-bindsym $mod+Shift+y		exec --no-startup-id i3resize left
+bindsym $mod+z			exec $term -e calcurse
+bindsym $mod+Shift+z		exec --no-startup-id i3resize left
 
 bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+u		exec --no-startup-id i3resize down
@@ -131,8 +132,8 @@ bindsym $mod+l			focus right
 bindsym $mod+Shift+l		move right 30
 bindsym $mod+Ctrl+l		move workspace to output right
 
-bindsym $mod+z			gaps outer current plus 5
-bindsym $mod+Shift+z		gaps outer current minus 5
+bindsym $mod+y			gaps outer current plus 5
+bindsym $mod+Shift+y		gaps outer current minus 5
 
 bindsym $mod+x			exec --no-startup-id xset dpms force off && mpc pause && pauseallmpv && slock &
 bindsym $mod+Shift+x		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
@@ -166,8 +167,8 @@ bindsym $mod+XF86Back		workspace prev
 bindsym $mod+Shift+XF86Back	move container to workspace prev
 bindsym $mod+XF86Forward	workspace next
 bindsym $mod+Shift+XF86Forward	move container to workspace next
-bindsym $mod+semicolon		workspace next
-bindsym $mod+apostrophe		split horizontal ;; exec $term
+bindsym $mod+uring		workspace next
+bindsym $mod+section		split horizontal ;; exec $term
 bindsym $mod+slash		split vertical ;; exec $term
 bindsym $mod+Shift+slash	kill
 bindsym $mod+backslash		workspace back_and_forth
@@ -252,10 +253,10 @@ bindsym $mod+Ctrl+Right		move workspace to output right
 
 # #---Media Keys---# #
 # Volume keys
-bindsym $mod+plus		exec --no-startup-id pulsemixer --change-volume +5 && pkill -RTMIN+10 i3blocks
-bindsym $mod+Shift+plus		exec --no-startup-id pulsemixer --change-volume +15 && pkill -RTMIN+10 i3blocks
-bindsym $mod+minus 		exec --no-startup-id pulsemixer --change-volume -5 && pkill -RTMIN+10 i3blocks
-bindsym $mod+Shift+minus	exec --no-startup-id pulsemixer --change-volume -15 && pkill -RTMIN+10 i3blocks
+bindsym $mod+dead_acute		exec --no-startup-id pulsemixer --change-volume +5 && pkill -RTMIN+10 i3blocks
+bindsym $mod+Shift+dead_acute		exec --no-startup-id pulsemixer --change-volume +15 && pkill -RTMIN+10 i3blocks
+bindsym $mod+equal 		exec --no-startup-id pulsemixer --change-volume -5 && pkill -RTMIN+10 i3blocks
+bindsym $mod+Shift+equal	exec --no-startup-id pulsemixer --change-volume -15 && pkill -RTMIN+10 i3blocks
 bindsym $mod+less 		exec --no-startup-id mpc prev
 bindsym $mod+Shift+less		exec --no-startup-id mpc seek 0%
 bindsym $mod+greater		exec --no-startup-id mpc next
