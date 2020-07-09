@@ -53,7 +53,7 @@ bindsym $mod+space		focus mode_toggle
 bindsym $mod+Escape		workspace prev
 bindsym $mod+Shift+Escape	exec --no-startup-id prompt "Exit i3?" "i3 exit"
 
-# bindsym $mod+BackSpace
+bindsym $mod+BackSpace          exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Shift+BackSpace	exec --no-startup-id prompt "Reboot computer?" "$reboot"
 
 bindsym $mod+semicolon		exec --no-startup-id dmenuunicode
