@@ -1,7 +1,9 @@
 http://lukesmith.xyz/rss.xml
 https://notrelated.libsyn.com/rss
+https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2 "~Luke Smith (PeerTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
 https://invidio.us/feed/channel/UCT6iAerLNE-0J1S_E97UAuQ "YongYea (YouTube)"
 https://invidio.us/feed/playlist/PLlRceUcRZcK0E1Id3NHchFaxikvCvAVQe "The Jimquisition (YouTube)"
+https://invidio.us/feed/playlist/PLlRceUcRZcK16xmdhHM5ZKdE2U8MO4T3x "Industry BS (JimSterling)"
 https://www.archlinux.org/feeds/news/ "tech"
 https://artixlinux.org/feed.php "Artix"

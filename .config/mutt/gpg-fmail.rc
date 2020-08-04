@@ -7,7 +7,7 @@ set crypt_replysignencrypted=yes
 set crypt_autoencrypt = yes
 
 
-set pgp_default_key="5138B8AC1E81EB7C20E238574E848309192E95B2"
+et pgp_default_key="0x4E848309192E95B2"
 set pgp_check_gpg_decrypt_status_fd
 set pgp_use_gpg_agent = yes
 set pgp_self_encrypt = yes

@@ -36,7 +36,8 @@ alias \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
 	z="zathura" \
-	wg="wg-quick up PotatOS"
+	wg="wg-quick up potatOS" \
+	ec="emacsclient -n -c --socket-name=zeth-emacsd"
 
 alias \
 	magit="nvim -c MagitOnly" \

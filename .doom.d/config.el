@@ -57,3 +57,12 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+(require 'tramp)
+(add-to-list 'tramp-methods
+             '("yadm"
+               (tramp-login-program "yadm")
+               (tramp-login-args (("enter")))
+               (tramp-login-env (("SHELL") ("/bin/sh")))
+               (tramp-remote-shell "/bin/sh")
+               (tramp-remote-shell-args ("-c"))))
+(map! :leader "g." (cmd! (magit-status  "/yadm::")))
