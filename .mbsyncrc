@@ -24,25 +24,25 @@ MaxMessages 0
 ExpireUnread no
 # End profile
 
-IMAPStore fmail-remote
+IMAPStore zeth@zethjack.eu-remote
 Host imap.forpsi.com
-Port  993
+Port 993
 User zeth@zethjack.eu
-PassCmd "pass mutt-wizard-fmail"
+PassCmd "pass mw-zeth@zethjack.eu"
+AuthMechs LOGIN
 SSLType IMAPS
-AuthMech LOGIN
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-MaildirStore fmail-local
+MaildirStore zeth@zethjack.eu-local
 Subfolders Verbatim
-Path ~/.local/share/mail/fmail/
-Inbox ~/.local/share/mail/fmail/INBOX
+Path /home/zeth/.local/share/mail/zeth@zethjack.eu/
+Inbox /home/zeth/.local/share/mail/zeth@zethjack.eu/INBOX
 Flatten .
 
-Channel fmail
+Channel zeth@zethjack.eu
 Expunge Both
-Master :fmail-remote:
-Slave :fmail-local:
+Master :zeth@zethjack.eu-remote:
+Slave :zeth@zethjack.eu-local:
 Patterns * !"[Gmail]/All Mail"
 Create Both
 SyncState *
