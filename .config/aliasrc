@@ -12,6 +12,7 @@ alias \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner"
+	tat="tmux a || tmux"
 
 # Colorize commands when possible.
 alias \
@@ -37,7 +38,8 @@ alias \
 	xq="xbps-query" \
 	z="zathura" \
 	wg="wg-quick up potatOS" \
-	ec="emacsclient -n -c --socket-name=zeth-emacsd"
+	ec="emacsclient -n -c --socket-name=zeth-emacsd" \
+	yay="paru"
 
 alias \
 	magit="nvim -c MagitOnly" \
