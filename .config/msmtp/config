@@ -11,13 +11,11 @@ from jerabek.michal@gmail.com
 user jerabek.michal@gmail.com
 passwordeval "pass mutt-wizard-gmail"
 
-
-account fmail
+account zeth@zethjack.eu
 host smtp.forpsi.com
-tls_starttls off
-port 465
+port 587
 from zeth@zethjack.eu
 user zeth@zethjack.eu
-passwordeval "pass mutt-wizard-fmail"
+passwordeval "pass mw-zeth@zethjack.eu"
 
 
