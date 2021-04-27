@@ -11,5 +11,5 @@ correct-downscaling=yes
 sigmoid-upscaling=yes
 deband=no
 volume-max=100
-ytdl-format='bestvideo[height<=720][fps=30]+bestaudio/best'
+ytdl-format='bestvideo[height<=480][fps=30]+bestaudio/best'
 ytdl-raw-options='prefer-free-formats='

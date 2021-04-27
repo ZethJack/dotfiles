@@ -1,10 +1,11 @@
 http://lukesmith.xyz/rss.xml
 https://notrelated.libsyn.com/rss
-https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2 "~Luke Smith (PeerTube)"
+https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 "~Luke Smith (PeerTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCT6iAerLNE-0J1S_E97UAuQ "YongYea (YouTube)"
 https://www.youtube.com/feeds/videos.xml?playlist_id=PLlRceUcRZcK0E1Id3NHchFaxikvCvAVQe "The Jimquisition (YouTube)"
 https://www.youtube.com/feeds/videos.xml?playlist_id=PLlRceUcRZcK16xmdhHM5ZKdE2U8MO4T3x "Industry BS (JimSterling)"
 https://www.youtube.com/feeds/videos.xml?playlist_id=PL6PNZBb6b9Ltgl6WM5rn2pjrXd_qdit2S "Ross's Game Dungeon"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaifrB5IrvGNPJmPeVOcqBA "Kruggsmash"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCGZmkgX5xXZZboN0-ZRp3_A "Charl"
 https://www.youtube.com/feeds/videos.xml?playlist_id=PL6PNZBb6b9LvDWpI-5CPYUxG1Rnm-vr9V "Freeman's Mind"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC21uZkfXpT8rPY-gPgMiCwA "Civvie 11"
@@ -12,5 +13,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCFfD9fWqkT4PNy7v6r8ilmg "Co
 https://www.youtube.com/feeds/videos.xml?channel_id=UCeCJB88u93eq91U0rlJsW-A "Doomcock"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmb8hO2ilV9vRa8cilis88A "Thunderf00t"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "Distrotube"
+https://peertube.anon-kenkai.com/feeds/videos.xml?videoChannelId=51 "No one cares show"
 https://www.archlinux.org/feeds/news/ "tech"
 https://artixlinux.org/feed.php "Artix"
