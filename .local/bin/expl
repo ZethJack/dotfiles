@@ -1,0 +1,3 @@
+#!/bin/sh
+
+youtube-dl -j --flat-playlist $1 | jq -r '.id' | sed 's_^_https://youtu.be/_' > Docs/playlist.txt
