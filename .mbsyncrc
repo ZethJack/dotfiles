@@ -15,8 +15,8 @@ Flatten .
 
 Channel gmail
 Expunge Both
-Master :gmail-remote:
-Slave :gmail-local:
+Far :gmail-remote:
+Near :gmail-local:
 Patterns *
 Create Both
 SyncState *
@@ -41,8 +41,8 @@ Flatten .
 
 Channel zeth@zethjack.eu
 Expunge Both
-Master :zeth@zethjack.eu-remote:
-Slave :zeth@zethjack.eu-local:
+Far :zeth@zethjack.eu-remote:
+Near :zeth@zethjack.eu-local:
 Patterns * !"[Gmail]/All Mail"
 Create Both
 SyncState *
