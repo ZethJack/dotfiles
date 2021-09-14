@@ -16,6 +16,10 @@ host smtp.forpsi.com
 port 587
 from zeth@zethjack.eu
 user zeth@zethjack.eu
-passwordeval "pass mw-zeth@zethjack.eu"
+passwordeval "pass zeth@zethjack.eu"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/zeth/.config/msmtp/msmtp.log
 
 

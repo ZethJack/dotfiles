@@ -24,11 +24,12 @@ MaxMessages 0
 ExpireUnread no
 # End profile
 
+
 IMAPStore zeth@zethjack.eu-remote
 Host imap.forpsi.com
 Port 993
 User zeth@zethjack.eu
-PassCmd "pass mw-zeth@zethjack.eu"
+PassCmd "pass zeth@zethjack.eu"
 AuthMechs LOGIN
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
