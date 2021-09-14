@@ -9,7 +9,7 @@ alias \
 	mv="mv -iv" \
 	rm="rm -vI" \
 	mkd="mkdir -pv" \
-	yt="youtube-dl --add-metadata -i" \
+	yt="yt-dlp --add-metadata -i --sponskrub-cut" \
 	yta='yt -x -f bestaudio/best --audio-format vorbis -o "%(title)s.%(ext)s"' \
 	ffmpeg="ffmpeg -hide_banner"
 	tat="tmux a || tmux"
