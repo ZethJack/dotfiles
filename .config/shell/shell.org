@@ -1,3 +1,13 @@
+#+TITLE: Shell
+#+tangle: yes
+
+* Shell files
+These files get loaded upon login, sourced, referenced, they set up enviroment variables, aliases, shortcuts and bookmarks
+** Zprofile
+Profile file runs on login. Eniromental variables are set here.
+
+#+begin_src bash :tangle .zprofile
+
 #!/bin/zsh
 
 # profile file. Runs on login. Environmental variables are set here.
@@ -69,75 +79,75 @@ ow=📂:\
 ln=⛓:\
 or=❌:\
 ex=🎯:\
-*.txt=✍:\
-*.mom=✍:\
-*.me=✍:\
-*.ms=✍:\
-*.png=🖼:\
-*.webp=🖼:\
-*.ico=🖼:\
-*.jpg=📸:\
-*.jpe=📸:\
-*.jpeg=📸:\
-*.gif=🖼:\
-*.svg=🗺:\
-*.tif=🖼:\
-*.tiff=🖼:\
-*.xcf=🖌:\
-*.html=🌎:\
-*.xml=📰:\
-*.gpg=🔒:\
-*.css=🎨:\
-*.pdf=📚:\
-*.djvu=📚:\
-*.epub=📚:\
-*.csv=📓:\
-*.xlsx=📓:\
-*.tex=📜:\
-*.md=📘:\
-*.r=📊:\
-*.R=📊:\
-*.rmd=📊:\
-*.Rmd=📊:\
-*.m=📊:\
-*.mp3=🎵:\
-*.opus=🎵:\
-*.ogg=🎵:\
-*.m4a=🎵:\
-*.flac=🎼:\
-*.wav=🎼:\
-*.mkv=🎥:\
-*.mp4=🎥:\
-*.webm=🎥:\
-*.mpeg=🎥:\
-*.avi=🎥:\
-*.mov=🎥:\
-*.mpg=🎥:\
-*.wmv=🎥:\
-*.m4b=🎥:\
-*.flv=🎥:\
-*.zip=📦:\
-*.rar=📦:\
-*.7z=📦:\
-*.tar.gz=📦:\
-*.z64=🎮:\
-*.v64=🎮:\
-*.n64=🎮:\
-*.gba=🎮:\
-*.nes=🎮:\
-*.gdi=🎮:\
-*.1=ℹ:\
-*.nfo=ℹ:\
-*.info=ℹ:\
-*.log=📙:\
-*.iso=📀:\
-*.img=📀:\
-*.bib=🎓:\
-*.ged=👪:\
-*.part=💔:\
-*.torrent=🔽:\
-*.jar=♨:\
-*.java=♨:\
+,*.txt=✍:\
+,*.mom=✍:\
+,*.me=✍:\
+,*.ms=✍:\
+,*.png=🖼:\
+,*.webp=🖼:\
+,*.ico=🖼:\
+,*.jpg=📸:\
+,*.jpe=📸:\
+,*.jpeg=📸:\
+,*.gif=🖼:\
+,*.svg=🗺:\
+,*.tif=🖼:\
+,*.tiff=🖼:\
+,*.xcf=🖌:\
+,*.html=🌎:\
+,*.xml=📰:\
+,*.gpg=🔒:\
+,*.css=🎨:\
+,*.pdf=📚:\
+,*.djvu=📚:\
+,*.epub=📚:\
+,*.csv=📓:\
+,*.xlsx=📓:\
+,*.tex=📜:\
+,*.md=📘:\
+,*.r=📊:\
+,*.R=📊:\
+,*.rmd=📊:\
+,*.Rmd=📊:\
+,*.m=📊:\
+,*.mp3=🎵:\
+,*.opus=🎵:\
+,*.ogg=🎵:\
+,*.m4a=🎵:\
+,*.flac=🎼:\
+,*.wav=🎼:\
+,*.mkv=🎥:\
+,*.mp4=🎥:\
+,*.webm=🎥:\
+,*.mpeg=🎥:\
+,*.avi=🎥:\
+,*.mov=🎥:\
+,*.mpg=🎥:\
+,*.wmv=🎥:\
+,*.m4b=🎥:\
+,*.flv=🎥:\
+,*.zip=📦:\
+,*.rar=📦:\
+,*.7z=📦:\
+,*.tar.gz=📦:\
+,*.z64=🎮:\
+,*.v64=🎮:\
+,*.n64=🎮:\
+,*.gba=🎮:\
+,*.nes=🎮:\
+,*.gdi=🎮:\
+,*.1=ℹ:\
+,*.nfo=ℹ:\
+,*.info=ℹ:\
+,*.log=📙:\
+,*.iso=📀:\
+,*.img=📀:\
+,*.bib=🎓:\
+,*.ged=👪:\
+,*.part=💔:\
+,*.torrent=🔽:\
+,*.jar=♨:\
+,*.java=♨:\
 "
 
 [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts >/dev/null 2>&1 &
@@ -151,3 +161,65 @@ Please run:
 	\033[32mparu -S libxft-bgra-git\033[0m
 and replace \`libxft\`. Afterwards, you may start the graphical server by running \`startx\`."
 fi
+#+end_src
+** Aliases
+The following file should handle aliases
+#+begin_src bash :tangle aliasrc
+
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# sudo not required for some system commands
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	mkd="mkdir -pv" \
+	yt="yt-dlp --add-metadata -i --sponskrub-cut" \
+	yta='yt -x -f bestaudio/best --audio-format vorbis -o "%(title)s.%(ext)s"' \
+	ffmpeg="ffmpeg -hide_banner"
+	tat="tmux a || tmux"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="pacman" \
+#+end_src
+
+These are for the void-linux distro, not needed in arch-based distros
+xi="sudo xbps-install" \
+xr="sudo xbps-remove -R" \
+xq="xbps-query" \
+z="zathura"
+
+#+begin_src bash :tangle aliasrc
+alias \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+#+end_src

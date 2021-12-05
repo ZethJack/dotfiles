@@ -1,29 +1,28 @@
-IMAPStore gmail-remote
+IMAPStore jerabek.michal@gmail.com-remote
 Host imap.gmail.com
 Port  993
 User jerabek.michal@gmail.com
-PassCmd "pass mutt-wizard-gmail"
-SSLType IMAPS
+PassCmd "pass jerabek.michal@gmail.com"
 AuthMech LOGIN
+SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-MaildirStore gmail-local
+MaildirStore jerabek.michal@gmail.com-local
 Subfolders Verbatim
-Path ~/.local/share/mail/gmail/
-Inbox ~/.local/share/mail/gmail/INBOX
+Path /home/zeth/.local/share/mail/jerabek.michal@gmail.com/
+Inbox /home/zeth/.local/share/mail/jerabek.michal@gmail.com/INBOX
 Flatten .
 
-Channel gmail
+Channel jerabek.michal@gmail.com
 Expunge Both
-Far :gmail-remote:
-Near :gmail-local:
+Far :jerabek.michal@gmail.com-remote:
+Near :jerabek.michal@gmail.com-local:
 Patterns *
 Create Both
 SyncState *
 MaxMessages 0
 ExpireUnread no
 # End profile
-
 
 IMAPStore zeth@zethjack.eu-remote
 Host imap.forpsi.com
@@ -50,4 +49,3 @@ SyncState *
 MaxMessages 0
 ExpireUnread no
 # End profile
-

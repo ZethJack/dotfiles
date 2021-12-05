@@ -41,6 +41,11 @@
 (add-hook 'message-mode-hook #'word-wrap-mode)
 (add-hook 'text-mode-hook #'visual-line-mode)
 
+;; Automatically tangle org-files after saving - handy for them literate configs
+(add-hook 'org-mode-hook
+          (lambda () (add-hook 'after-save-hook #'org-babel-tangle
+                               :append :local)))
+
 (setq org-startup-indented 'nil)
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
