@@ -38,6 +38,7 @@ set noshowcmd
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+	set wrap linebreak
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
@@ -119,6 +120,11 @@ set noshowcmd
 	autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :Goyo\|x!<CR>
 	autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo\|q!<CR>
 
+" Same thing for toots
+	autocmd BufRead,BufNewFile /tmp/tut* let g:goyo_width=80
+	autocmd BufRead,BufNewFile /tmp/tut* :Goyo | set bg=light
+	autocmd BufRead,BufNewFile /tmp/tut* map ZZ :Goyo\|x!<CR>
+	autocmd BufRead,BufNewFile /tmp/tut* map ZQ :Goyo\|q!<CR>
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
 	autocmd BufWritePre * %s/\s\+$//e
 	autocmd BufWritePre * %s/\n\+\%$//e
