@@ -19,7 +19,7 @@ alias \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
 	yt="yt-dlp --add-metadata -i --sponskrub-cut" \
-	yta='yt -x -f bestaudio/best --audio-format vorbis -o "%(title)s.%(ext)s"' \
+	yta='yt -x -f bestaudio/best --audio-format opus -o "%(title)s.%(ext)s"' \
 	ffmpeg="ffmpeg -hide_banner"
 	tat="tmux a || tmux"
 
