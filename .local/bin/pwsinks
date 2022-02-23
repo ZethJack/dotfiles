@@ -1,0 +1,13 @@
+#!/bin/env bash
+
+clear
+pactl load-module module-remap-source source_name=mic
+pactl load-module module-null-sink sink_name=voip
+pactl load-module module-null-sink sink_name=music
+pactl load-module module-null-sink sink_name=desktop
+
+echo -ne "
+############################################
+successfully launched 4 JACK sinks / sources
+############################################
+"
