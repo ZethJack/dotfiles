@@ -19,5 +19,5 @@ for program in $autostart; do
 	pidof -s "$program" || setsid -f "$program"
 done >/dev/null 2>&1
 
-#ensure that xrdb has finished running before moving on to start WM/DE
-[-n "$xrdbpid" ] && wait "$xrdbpid"
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"

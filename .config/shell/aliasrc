@@ -30,6 +30,7 @@ alias \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
 	wget='wget -c'
+	ip="ip -color=auto"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -45,11 +46,11 @@ alias \
 	upall='paru -Syu --noconfirm && pkill -RTMIN+8 "${STATUSBAR:-dwmblocks}"'
 
 alias \
+	lf="lfub" \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
 	cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME" \
         mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"\
-	yay="paru"\
-	tat="tmux a || tmux"
+	yay="paru"

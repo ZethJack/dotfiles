@@ -131,11 +131,9 @@ st.alpha: 0.9
 /* *.color15:  #aabac8 */
 /* *.background:   #000000 */
 
-!! Dracula Xresources palette
+! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36
-*dmenu.color0:#282A36
-*dwm.color0:  #282A36
 *.color0:     #000000
 *.color8:     #4D4D4D
 *.color1:     #FF5555
@@ -145,8 +143,6 @@ st.alpha: 0.9
 *.color3:     #F1FA8C
 *.color11:    #F4F99D
 *.color4:     #BD93F9
-*dwm.color4:   #FFA000
-*dmenu.color4: #FFA000
 *.color12:    #CAA9FA
 *.color5:     #FF79C6
 *.color13:    #FF92D0
@@ -154,6 +150,8 @@ st.alpha: 0.9
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+*dwm.color4:   #FFA000
+*dmenu.color4: #FFA000
 
 /* *.background: .color0 */
 /* *.color256: 0#1d2021 */
