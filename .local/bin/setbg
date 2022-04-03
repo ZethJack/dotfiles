@@ -20,14 +20,15 @@ case "$(file --mime-type -b "$trueloc")" in
 	*) notify-send "Error" "Not a valid image." ; exit 1;;
 esac
 
+# DISABLED because I'd rather not use WAL to generate theme #
 # If pywal is installed, use it.
-if command -v wal >/dev/null 2>&1 ; then
-	wal -i "$(readlink -f $bgloc)" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1 &&
-	pidof dwm >/dev/null && xdotool key super+F12
-# If pywal is removed, return config files to normal.
-else
-	[ -f "$dunstconf.bak" ] && unlink "$dunstconf" && mv "$dunstconf.bak" "$dunstconf"
-	[ -f "$zathuraconf.bak" ] && unlink "$zathuraconf" && mv "$zathuraconf.bak" "$zathuraconf"
-fi
+# if command -v wal >/dev/null 2>&1 ; then
+# 	wal -i "$(readlink -f $bgloc)" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1 &&
+# 	pidof dwm >/dev/null && xdotool key super+F12
+# # If pywal is removed, return config files to normal.
+# else
+# 	[ -f "$dunstconf.bak" ] && unlink "$dunstconf" && mv "$dunstconf.bak" "$dunstconf"
+# 	[ -f "$zathuraconf.bak" ] && unlink "$zathuraconf" && mv "$zathuraconf.bak" "$zathuraconf"
+# fi
 
 xwallpaper --zoom "$bgloc"

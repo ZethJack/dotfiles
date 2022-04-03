@@ -18,9 +18,9 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	yt="yt-dlp --add-metadata -i --sponsorblock-remove all" \
+	yt="yt-dlp --add-metadata -i --sponsorblock-remove sponsor, selfpromo, interaction" \
 	yta='yt -x -f bestaudio/best --audio-format opus -o "%(title)s.%(ext)s"' \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
 	tat="tmux a || tmux"
 
 # Colorize commands when possible.
