@@ -19,6 +19,7 @@ x-scheme-handler/http=brave-browser.desktop
 x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/tootle=com.github.bleakgrey.tootle.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
+x-scheme-handler/discord-610508934456934412=discord-610508934456934412.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-1ZSTX0.desktop;userapp-Telegram Desktop-JI1GD1.desktop;
