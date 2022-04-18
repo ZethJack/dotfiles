@@ -1,2 +1,3 @@
-#!/bin/bash
-pw-loadwires ~/.config/pipewire/sessionrc
+#!/bin/sh
+sleep 1
+qpwgraph -am .config/pipewire/patch.qpwgraph

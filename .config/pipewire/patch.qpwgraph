@@ -1,0 +1,46 @@
+<!DOCTYPE patchbay>
+<patchbay name="patch" version="0.2.5">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="Music Player Daemon:output_FL" node="Music Player Daemon"/>
+   <input port="music Audio/Sink sink:playback_FL" node="music Audio/Sink sink"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="voip Audio/Sink sink:monitor_FL" node="voip Audio/Sink sink"/>
+   <input port="HDA Intel PCH:playback_FL" node="Vnitřní zvukový systém Analogové stereo"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="desktop Audio/Sink sink:monitor_FR" node="desktop Audio/Sink sink"/>
+   <input port="HDA Intel PCH:playback_FR" node="Vnitřní zvukový systém Analogové stereo"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="desktop Audio/Sink sink:monitor_FL" node="desktop Audio/Sink sink"/>
+   <input port="HDA Intel PCH:playback_FL" node="Vnitřní zvukový systém Analogové stereo"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="music Audio/Sink sink:monitor_FR" node="music Audio/Sink sink"/>
+   <input port="HDA Intel PCH:playback_FR" node="Vnitřní zvukový systém Analogové stereo"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="WEBRTC VoiceEngine:output_FL" node="WEBRTC VoiceEngine"/>
+   <input port="voip Audio/Sink sink:playback_FL" node="voip Audio/Sink sink"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="music Audio/Sink sink:monitor_FL" node="music Audio/Sink sink"/>
+   <input port="HDA Intel PCH:playback_FL" node="Vnitřní zvukový systém Analogové stereo"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="voip Audio/Sink sink:monitor_FR" node="voip Audio/Sink sink"/>
+   <input port="HDA Intel PCH:playback_FR" node="Vnitřní zvukový systém Analogové stereo"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="Music Player Daemon:output_FR" node="Music Player Daemon"/>
+   <input port="music Audio/Sink sink:playback_FR" node="music Audio/Sink sink"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output port="WEBRTC VoiceEngine:output_FR" node="WEBRTC VoiceEngine"/>
+   <input port="voip Audio/Sink sink:playback_FR" node="voip Audio/Sink sink"/>
+  </item>
+ </items>
+</patchbay>
+
