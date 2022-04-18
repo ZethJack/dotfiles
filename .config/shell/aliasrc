@@ -18,7 +18,7 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	yt="yt-dlp --add-metadata -i --sponsorblock-remove sponsor, selfpromo, interaction" \
+	yt="yt-dlp --add-metadata -i --sponsorblock-remove sponsor,selfpromo,interaction" \
 	yta='yt -x -f bestaudio/best --audio-format opus -o "%(title)s.%(ext)s"' \
 	ffmpeg="ffmpeg -hide_banner" \
 	tat="tmux a || tmux"
@@ -43,7 +43,7 @@ alias \
 	v="$EDITOR" \
 	p="pacman" \
 	update="sudo pacman -Syyu"\
-	upall='paru -Syu --noconfirm && pkill -RTMIN+8 "${STATUSBAR:-dwmblocks}"'
+	upall='paru -Syu --noconfirm --sudoloop && pkill -RTMIN+8 "${STATUSBAR:-dwmblocks}"'
 
 alias \
 	lf="lfub" \
