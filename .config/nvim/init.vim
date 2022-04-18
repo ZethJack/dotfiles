@@ -43,6 +43,11 @@ set noshowcmd
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Makes Undo action persist even if file was previously closed
+	set undofile
+	set undodir=$HOME/.cache/vim/undo
+	set undolevels=1000
+	set undoreload=10000
 " Perform dot commands over visual blocks:
 	vnoremap . :normal .<CR>
 " Goyo plugin makes text more readable when writing prose:
