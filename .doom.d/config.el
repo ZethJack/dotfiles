@@ -46,7 +46,7 @@
 (add-hook 'org-mode-hook
           (lambda () (add-hook 'after-save-hook #'org-babel-tangle
                                :append :local)))
-
+(setq global-visual-line-mode 't)
 (setq org-startup-indented 'nil)
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
