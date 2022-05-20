@@ -1,3 +1,4 @@
 #!/bin/sh
 sleep 1
-qpwgraph -am .config/pipewire/patch.qpwgraph
+# qpwgraph -am .config/pipewire/patch.qpwgraph
+pidof qjackctl || qjackctl -s -a ".config/jack/session.xml"
