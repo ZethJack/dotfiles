@@ -1,3 +1,6 @@
 [submodule ".config/mpv/script_modules/mpvSockets"]
 	path = .config/mpv/script_modules/mpvSockets
 	url = https://github.com/wis/mpvSockets.git
+[submodule ".local/src/zethjack/themes/anubis"]
+	path = .local/src/zethjack/themes/anubis
+	url = https://github.com/mitrichius/hugo-theme-anubis.git
