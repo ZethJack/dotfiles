@@ -1,82 +1,80 @@
 <!DOCTYPE patchbay>
-<patchbay version="0.9.7" name="session">
+<patchbay name="session" version="0.9.7">
  <output-sockets>
-  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo" exclusive="off" type="jack-audio" name="Vnitřní zvukový systém Analogové stereo">
+  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo" name="Vnitřní zvukový systém Analogové stereo" exclusive="off" type="jack-audio">
    <plug>capture_FL</plug>
    <plug>capture_FR</plug>
   </socket>
-  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo\-82" exclusive="off" type="jack-audio" name="Vnitřní zvukový systém Analogové stereo-82">
+  <socket client="mic\ source" name="mic source" exclusive="off" type="jack-audio">
    <plug>capture_FL</plug>
    <plug>capture_FR</plug>
   </socket>
-  <socket client="mic\ source" exclusive="off" type="jack-audio" name="mic source">
-   <plug>capture_FL</plug>
-   <plug>capture_FR</plug>
-  </socket>
-  <socket client="Music\ Player\ Daemon" exclusive="off" type="jack-audio" name="Music Player Daemon">
+  <socket client="Music\ Player\ Daemon" name="Music Player Daemon" exclusive="off" type="jack-audio">
    <plug>left</plug>
    <plug>right</plug>
   </socket>
-  <socket client="desktop\ Audio\/Sink\ sink\ Monitor" exclusive="off" type="jack-audio" name="desktop Audio/Sink sink Monitor">
+  <socket client="desktop\ Audio\/Sink\ sink\ Monitor" name="desktop Audio/Sink sink Monitor" exclusive="off" type="jack-audio">
    <plug>monitor_FL</plug>
    <plug>monitor_FR</plug>
   </socket>
-  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo\-81\ Monitor" exclusive="off" type="jack-audio" name="Vnitřní zvukový systém Analogové stereo-81 Monitor">
+  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo\ Monitor" name="Vnitřní zvukový systém Analogové stereo Monitor" exclusive="off" type="jack-audio">
    <plug>monitor_FL</plug>
    <plug>monitor_FR</plug>
   </socket>
-  <socket client="mic\ source\ Monitor" exclusive="off" type="jack-audio" name="mic source Monitor">
+  <socket client="mic\ source\ Monitor" name="mic source Monitor" exclusive="off" type="jack-audio">
    <plug>monitor_FL</plug>
    <plug>monitor_FR</plug>
   </socket>
-  <socket client="voip\ Audio\/Sink\ sink\ Monitor" exclusive="off" type="jack-audio" name="voip Audio/Sink sink Monitor">
+  <socket client="voip\ Audio\/Sink\ sink\ Monitor" name="voip Audio/Sink sink Monitor" exclusive="off" type="jack-audio">
    <plug>monitor_FL</plug>
    <plug>monitor_FR</plug>
   </socket>
-  <socket client="music\ Audio\/Sink\ sink\ Monitor" exclusive="off" type="jack-audio" name="music Audio/Sink sink Monitor">
+  <socket client="music\ Audio\/Sink\ sink\ Monitor" name="music Audio/Sink sink Monitor" exclusive="off" type="jack-audio">
    <plug>monitor_FL</plug>
    <plug>monitor_FR</plug>
   </socket>
-  <socket client="WEBRTC\ VoiceEngine" exclusive="off" type="jack-audio" name="Discord">
-   <plug>output_FL</plug>
-   <plug>output_FR</plug>
+  <socket client="Midi\-Bridge" name="Midi-Bridge" exclusive="off" type="jack-midi">
+   <plug>Midi\ Through\:\(capture_0\)\ Midi\ Through\ Port\-0</plug>
+  </socket>
+  <socket client="Midi\ Through" name="Midi Through" exclusive="off" type="alsa-midi">
+   <plug>Midi\ Through\ Port\-0</plug>
   </socket>
  </output-sockets>
  <input-sockets>
-  <socket client="desktop\ Audio\/Sink\ sink" exclusive="off" type="jack-audio" name="desktop Audio/Sink sink">
+  <socket client="desktop\ Audio\/Sink\ sink" name="desktop Audio/Sink sink" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo\-81" exclusive="off" type="jack-audio" name="Vnitřní zvukový systém Analogové stereo-81">
+  <socket client="Vnit\řn\í\ zvukov\ý\ syst\ém\ Analogov\é\ stereo" name="Vnitřní zvukový systém Analogové stereo" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="mic\ source" exclusive="off" type="jack-audio" name="mic source">
+  <socket client="mic\ source" name="mic source" exclusive="off" type="jack-audio">
    <plug>input_FL</plug>
    <plug>input_FR</plug>
   </socket>
-  <socket client="voip\ Audio\/Sink\ sink" exclusive="off" type="jack-audio" name="voip Audio/Sink sink">
+  <socket client="voip\ Audio\/Sink\ sink" name="voip Audio/Sink sink" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="WEBRTC\ VoiceEngine" exclusive="off" type="jack-audio" name="Discord">
-   <plug>input_FL</plug>
-   <plug>input_FR</plug>
-  </socket>
-  <socket client="music\ Audio\/Sink\ sink" exclusive="off" type="jack-audio" name="music Audio/Sink sink">
+  <socket client="music\ Audio\/Sink\ sink" name="music Audio/Sink sink" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
+  </socket>
+  <socket client="Midi\-Bridge" name="Midi-Bridge" exclusive="off" type="jack-midi">
+   <plug>Midi\ Through\:\(playback_0\)\ Midi\ Through\ Port\-0</plug>
+  </socket>
+  <socket client="Midi\ Through" name="Midi Through" exclusive="off" type="alsa-midi">
+   <plug>Midi\ Through\ Port\-0</plug>
   </socket>
  </input-sockets>
  <slots/>
  <cables>
-  <cable output="Vnitřní zvukový systém Analogové stereo" type="jack-audio" input="mic source"/>
-  <cable output="mic source" type="jack-audio" input="Discord"/>
-  <cable output="Music Player Daemon" type="jack-audio" input="music Audio/Sink sink"/>
-  <cable output="desktop Audio/Sink sink Monitor" type="jack-audio" input="Vnitřní zvukový systém Analogové stereo-81"/>
-  <cable output="voip Audio/Sink sink Monitor" type="jack-audio" input="Vnitřní zvukový systém Analogové stereo-81"/>
-  <cable output="music Audio/Sink sink Monitor" type="jack-audio" input="Vnitřní zvukový systém Analogové stereo-81"/>
-  <cable output="Discord" type="jack-audio" input="voip Audio/Sink sink"/>
+  <cable input="mic source" output="Vnitřní zvukový systém Analogové stereo" type="jack-audio"/>
+  <cable input="music Audio/Sink sink" output="Music Player Daemon" type="jack-audio"/>
+  <cable input="Vnitřní zvukový systém Analogové stereo" output="desktop Audio/Sink sink Monitor" type="jack-audio"/>
+  <cable input="Vnitřní zvukový systém Analogové stereo" output="voip Audio/Sink sink Monitor" type="jack-audio"/>
+  <cable input="Vnitřní zvukový systém Analogové stereo" output="music Audio/Sink sink Monitor" type="jack-audio"/>
  </cables>
 </patchbay>
 
