@@ -1,0 +1,5 @@
+#!/bin/sh
+sleep 1
+#qpwgraph -am .config/pipewire/patch.qpwgraph
+qjackctl -s -a ".config/jack/session.xml"
+pw-loadwires ".config/pipewire/startup"

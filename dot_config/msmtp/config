@@ -1,0 +1,22 @@
+account jerabek.michal@gmail.com
+host smtp.gmail.com
+port 587
+from jerabek.michal@gmail.com
+user jerabek.michal@gmail.com
+passwordeval "pass jerabek.michal@gmail.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/zeth/.config/msmtp/msmtp.log
+
+account zeth@zethjack.eu
+host smtp.forpsi.com
+port 587
+from zeth@zethjack.eu
+user zeth@zethjack.eu
+passwordeval "pass zeth@zethjack.eu"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/zeth/.config/msmtp/msmtp.log
+

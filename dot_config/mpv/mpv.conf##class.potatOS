@@ -1,0 +1,14 @@
+xv-adaptor=1
+x11-bypass-compositor=no
+profile=opengl-hq
+scale=ewa_lanczossharp
+cscale=ewa_lanczossoft
+dscale=mitchell
+scale-antiring=0.7
+cscale-antiring=0.8
+dither-depth=auto
+correct-downscaling=yes
+sigmoid-upscaling=yes
+deband=no
+volume-max=100
+ytdl-raw-options='prefer-free-formats='
