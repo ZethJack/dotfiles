@@ -55,3 +55,8 @@ alias \
         mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"\
 	yay="paru"\
 	pod='tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format opus --sponsorblock-remove sponsor,selfpromo,interaction -P ~/Sync/podcast'
+# these shortcuts are for config file management
+alias \
+	cfg="chezmoi" \
+	cfgs="cfg status" \
+	cfgd="cfg diff"
