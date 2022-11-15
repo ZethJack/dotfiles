@@ -30,6 +30,17 @@ function zsh_add_completion() {
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
 
+function gcom() {
+    git add .
+    git commit -m "$1"
+}
+
+function lazyg() {
+    git add .
+    git commit -m "$1"
+    git push
+}
+
 function mach_java_mode() {
     #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
     export SDKMAN_DIR="$HOME/.sdkman"
