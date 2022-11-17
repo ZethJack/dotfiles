@@ -16,3 +16,5 @@ run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run sxhkd &
 # unclutter - hides mouse cursor when inactive
 run unclutter &
+# MPD
+run mpd ~/.config/mpd/mpd.conf &
