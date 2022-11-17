@@ -1,12 +1,19 @@
-#
-# SXHKD Config
-#
+################
+# SXHKD Config #
+################
+
+# keychords
+# super + e {e, s, v, j, m}
+#   {emacsclient -c -a emacs, subl, vscodium, joplin-desktop, meld}
 
 #Restart sxhkd
 super + shift + x
   pkill -USR1 -x sxhkd && notify-send "Sxhkd config" "Reloaded."
 
 # Rofi
-
 super + d
   rofi -show drun -show-icons
+
+#Web browser
+super + w
+  librewolf
