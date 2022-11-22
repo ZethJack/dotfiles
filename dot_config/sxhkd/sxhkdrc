@@ -6,13 +6,17 @@
 # super + e {e, s, v, j, m}
 #   {emacsclient -c -a emacs, subl, vscodium, joplin-desktop, meld}
 
+# it is possible to state multiple bindings on single line see example below			
+# super + {_,alt + }t
+#	  {thunar, thunderbird}
+
 #Restart sxhkd
 super + shift + x
   pkill -USR1 -x sxhkd && notify-send "Sxhkd config" "Reloaded."
 
-# Rofi
-super + d
-  rofi -show drun -show-icons
+# Rofi for apps and all apps
+super + {_, shift + }d
+  rofi -show {drun -show-icons,run}
 
 #Web browser
 super + w

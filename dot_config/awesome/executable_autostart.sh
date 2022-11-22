@@ -18,3 +18,5 @@ run sxhkd &
 run unclutter &
 # MPD
 run mpd ~/.config/mpd/mpd.conf &
+# Notification daemon
+run dunst &
