@@ -1,6 +1,8 @@
+#!/bin/env bash
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CACHE_HOME="$HOME/.local/cache"
 
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
@@ -18,6 +20,7 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
+unsetopt PROMPT_SP
 
 # completions
 autoload -Uz compinit
@@ -39,9 +42,9 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/zsh-functions"
 
 # Normal files to source
-zsh_add_file "zsh-exports"
+zsh_add_file "exports"
 zsh_add_file "zsh-vim-mode"
-zsh_add_file "zsh-aliases"
+zsh_add_file "aliasrc"
 zsh_add_file "zsh-prompt"
 
 # Plugins
