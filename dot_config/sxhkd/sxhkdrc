@@ -21,3 +21,11 @@ super + {_, shift + }d
 #Web browser
 super + w
   librewolf
+
+# Launch emacsclient
+super + i
+  emacsclient -c -a 'Emacs'
+
+# Open file manager
+super + r; {r,t}
+  {alacritty -e lfub, pcmanfm}
