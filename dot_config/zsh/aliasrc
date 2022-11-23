@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env zsh
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
@@ -7,8 +7,6 @@
 
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
-alias yay="paru"
-alias mkd="mkdir -pv"
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
@@ -93,6 +91,6 @@ alias \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
-	cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME" \
+	cfg="cd $HOME/.local/share/chezmoi" \
 	yay="paru"\
 	pod='tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format opus --sponsorblock-remove sponsor,selfpromo,interaction -P ~/Sync/podcast'

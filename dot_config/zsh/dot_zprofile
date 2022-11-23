@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+[ -f $ZDOTDIR/exports ] && source $ZDOTDIR/exports

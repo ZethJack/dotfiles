@@ -1,11 +1,5 @@
-#!/bin/env bash
+#!/bin/env zsh
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.local/cache"
-
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 
 setopt appendhistory
 
@@ -21,11 +15,12 @@ unsetopt BEEP
 unsetopt PROMPT_SP
 
 # completions
-autoload -Uz compinit
+autoload -Uz compinit promptinit
 zstyle ':completion:*' menu select
 # zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
-# compinit
+compinit
+promptinit
 _comp_options+=(globdots)		# Include hidden files.
 
 autoload -U up-line-or-beginning-search
