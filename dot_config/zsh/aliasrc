@@ -84,6 +84,16 @@ alias \
 	p="pacman" \
 	update="sudo pacman -Syyu"\
 	upall='paru -Syu --noconfirm --sudoloop && pkill -RTMIN+8 "${STATUSBAR:-dwmblocks}"'
+# a couple of funcitons for lazy git user
+gcom() {
+  git add .
+  git commit -m "$1"
+}
+lazyg() {
+  git add .
+  git commit -m "$1"
+  git push
+}
 
 alias \
 	lf="lfub" \
