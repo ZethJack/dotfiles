@@ -22,7 +22,7 @@ run unclutter &
 run mpd ~/.config/mpd/mpd.conf &
 # Notification daemon
 run dunst &
-# Restore wallpaper
+# set background - runs setbg script, requires xwallpaper
 run setbg &
 # Run compositor
 run picom -b &
