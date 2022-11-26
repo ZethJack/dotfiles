@@ -10,6 +10,8 @@ function run {
 
 # List of the apps to autostart below, preceeded with "run"
 
+# Enable numlock and run remaps script
+run remaps &
 #Policy kit (needed for GUI apps to ask for password)
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #sxhkd hotkeys

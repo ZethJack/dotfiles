@@ -17,9 +17,9 @@ export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 #export PATH="$PATH:./node_modules/.bin"
-eval "$(fnm env)"
-eval "$(zoxide init zsh)"
-eval "`pip completion --zsh`"
+[ -x "$(command -v fnm)" ] && eval "$(fnm env)"
+[ -x "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"
+[ -x "$(command -v pip)" ] && eval "`pip completion --zsh`"
 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
