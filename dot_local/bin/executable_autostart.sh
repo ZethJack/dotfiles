@@ -20,3 +20,5 @@ run unclutter &
 run mpd ~/.config/mpd/mpd.conf &
 # Notification daemon
 run dunst &
+# Restore wallpaper
+run setbg &
