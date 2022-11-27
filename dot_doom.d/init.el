@@ -134,7 +134,7 @@
        ;;fortran           ; in FORTRAN, GOD is REAL (unless declared INTEGER)
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
-       gdscript          ; the language you waited for
+       (gdscript +lsp)         ; the language you waited for
        ;;(go +lsp)         ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
        (haskell +dante)    ; a language that's lazier than I am
@@ -149,7 +149,7 @@
        ;;lean
        ;;factor
        ;;ledger            ; an accounting system in Emacs
-       lua               ; one-based indices? one-based indices
+       (lua +lsp)               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
