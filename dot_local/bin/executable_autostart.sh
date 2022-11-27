@@ -24,3 +24,5 @@ run mpd ~/.config/mpd/mpd.conf &
 run dunst &
 # Restore wallpaper
 run setbg &
+# Run compositor
+run picom -b &
