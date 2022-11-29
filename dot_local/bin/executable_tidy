@@ -1,0 +1,22 @@
+#!/bin/sh
+
+img="$HOME/Pics"
+dox="$HOME/Docs"
+vid="$HOME/Vids"
+mus="$HOME/Music"
+
+src_dir="$(pwd)"
+
+for file in *.*; do
+    ext="${file##*.}"
+
+    case $ext in
+        'pdf'|'doc'|'docx'|'txt'|'xls'|'xlsx'|'ods'|'odt') mv "$file" "$dox" ;;
+        'mp3'|'m4a'|'ogg'|'waw'|'flac') mv "$file" "$mus" ;;
+        'png'|'gif'|'bmp'|'jpg'|'jpeg')  mv "$file" "$img" ;;
+        'svg')  mv "$file" "$img/svg" ;;
+        'mp4'|'webm'|'mpg'|'mpeg'|'flv'|'mkv'|'avi')  mv "$file" "$vid" ;;
+    esac
+done
+
+echo "All done!"
