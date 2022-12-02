@@ -30,11 +30,9 @@ zle -N down-line-or-beginning-search
 
 # Colors
 autoload -Uz colors && colors
-#
-# source
-plug "$HOME/.config/zsh/aliasrc"
-plug "$HOME/.config/zsh/exports"
-#
+# Aliases
+plug "$ZDOTDIR/aliasrc"
+
 # Plugins
 plug "esc/conda-zsh-completion"
 plug "zsh-users/zsh-autosuggestions"
