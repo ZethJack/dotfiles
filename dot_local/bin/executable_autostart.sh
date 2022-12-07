@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 #Lauch apps when AwesomeWM starts
+#set modnitor DPI
+DPI=96
+xrandr --dpi "$DPI"
 
 function run {
   if ! pgrep -f $1 ;
@@ -7,6 +10,10 @@ function run {
     $@&
   fi
 }
+
+# Some adjustments to related to x
+xset r rate 300 50 & # speed x rate up
+xset -dpms # disables monitor sleep time
 
 # List of the apps to autostart below, preceeded with "run"
 
