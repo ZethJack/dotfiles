@@ -8,13 +8,13 @@
 ** Installation
     Eventually I will write a bash script to automate this whole process, until then I will have to follow this process:
     - Install pre-requisities - on Arch:
-     #+begin_src
-     # Pacman -S chezmoi
-     #+end_src
+      #+begin_src
+      # Pacman -S chezmoi
+      #+end_src
     - install the dotfiles using chezmoi:
-     #+begin_src
-     $ chezmoi init --branch $BRANCH https://github.com/$GITHUB_USERNAME/dotfiles.git
-     #+end_src
+      #+begin_src
+      $ chezmoi init --branch $BRANCH https://github.com/$GITHUB_USERNAME/dotfiles.git
+      #+end_src
     - For =zsh= to work correctly, I install the =zap= plugin manager:
       #+begin_src
       sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
