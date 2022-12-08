@@ -43,7 +43,11 @@
 (remove-hook 'text-mode-hook #'auto-fill-mode)
 (add-hook 'message-mode-hook #'word-wrap-mode)
 (add-hook 'text-mode-hook #'visual-line-mode)
-
+;; disable org-roam within dired windows to avoid conflicting functions
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (org-roam-mode 0)
+            ))
 ;; Automatically tangle org-files after saving - handy for them literate configs
 (add-hook 'org-mode-hook
           (lambda () (add-hook 'after-save-hook #'org-babel-tangle
