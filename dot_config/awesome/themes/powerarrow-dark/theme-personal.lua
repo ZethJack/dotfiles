@@ -323,7 +323,6 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
             keyboardlayout,
             spr,
             arrl_ld,
@@ -356,8 +355,10 @@ function theme.at_screen_connect(s)
             arrl_dl,
             clock,
             spr,
+            wibox.widget.systray(),
             arrl_ld,
             wibox.container.background(s.mylayoutbox, theme.bg_focus),
+
         },
     }
 end
