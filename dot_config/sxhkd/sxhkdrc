@@ -34,5 +34,10 @@ super + i
 super + r; {r,t}
   {alacritty -e lfub, pcmanfm}
 
+# open passmenu
 ctrl + alt + p
   passmenu ~/.local/share/password-store/
+
+# Music player
+super + m
+  alacritty -e ncmpcpp
