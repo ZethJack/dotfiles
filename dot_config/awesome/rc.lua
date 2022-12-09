@@ -736,6 +736,8 @@ awful.rules.rules = {
     --   properties = { screen = 1, tag = "2" } },
     { rule = { class = "LibreWolf" },
       properties = { screen = s, tag = "2"  } },
+    { rule = { class = "discord" },
+      properties = { screen = s, tag = "3"  } },
 }
 
 -- }}}
