@@ -33,3 +33,6 @@
       git clone --depth 1 --single-branch https://github.com/doomemacs/doomemacs
       ~/.config/emacs/.config/emacs/bin/doom install
       #+end_src
+* TODOS
+** TODO Introduce install script (chezmoi can run bash scripts if they have =run_once_= prefix).
+** TODO Get list of programs to be installed via pacman and AUR
