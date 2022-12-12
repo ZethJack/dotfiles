@@ -18,25 +18,43 @@ super + shift + x
 super + BackSpace
   sysact
 
-# Rofi for apps and all apps
-super + {_, shift + }d
-  rofi -show {drun -show-icons,run}
-
 #Web browser
 super + w
   librewolf
 
-# Launch emacsclient
-super + i
-  emacsclient -c -a 'Emacs'
+# Email and abook
+super {_, shift + }e
+  {alacritty -e neomutt; rmdir ~/.abook, alacritty -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook}
 
 # Open file manager
 super + r; {r,t}
   {alacritty -e lfub, pcmanfm}
 
+# Launch emacsclient
+super + i
+  emacsclient -c -a 'Emacs'
+
+# Toggle compositor
+super + o
+  comptoggle
+
+# Pause mpd & mpv
+super + {_, shift + }p
+  mpc {pause, pause ; pauseallmpv}
+
+super + {_, shift + }uacute
+  mpc seek {-10, -60}
+
+super + {_, shift + }parenright
+  mpc seek {+10; +60}
+
 # open passmenu
 ctrl + alt + p
   passmenu ~/.local/share/password-store/
+
+# Rofi for apps and all apps
+super + {_, shift + }d
+  rofi -show {drun -show-icons,run}
 
 # Music player
 super + m
