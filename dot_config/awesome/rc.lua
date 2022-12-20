@@ -738,6 +738,8 @@ awful.rules.rules = {
       properties = { screen = s, tag = "2"  } },
     { rule = { class = "discord" },
       properties = { screen = s, tag = "3"  } },
+    {rule = { class = "Steam" },
+      properties = { screen = s, tag = "4" } },
 }
 
 -- }}}
