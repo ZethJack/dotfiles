@@ -56,6 +56,10 @@ ctrl + alt + p
 super + {_, shift + }d
   rofi -show {drun -show-icons,run}
 
+# vimwiki notes and newsboat
+super + {_, shift + }n
+  alacritty -e {nvim +VimwikiIndex, newsboat}
+
 # Music player
 super + m
   alacritty -e ncmpcpp
