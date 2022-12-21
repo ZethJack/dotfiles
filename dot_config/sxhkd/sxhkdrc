@@ -19,8 +19,8 @@ super + BackSpace
   sysact
 
 #Web browser
-super + w
-  librewolf
+super {_, shift +} w
+  {librewolf, alacritty -e sudo nmtui}
 
 # Email and abook
 super {_, shift + }e
@@ -29,6 +29,10 @@ super {_, shift + }e
 # Open file manager
 super + r; {r,t}
   {alacritty -e lfub, pcmanfm}
+
+# Launch htop
+super + shift + r
+  alacritty -e htop
 
 # Launch emacsclient
 super + i
