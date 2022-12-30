@@ -13,7 +13,9 @@
 #Restart sxhkd
 super + shift + x
   pkill -USR1 -x sxhkd && notify-send "Sxhkd config" "Reloaded."
-
+# dmenuunicode - select emoji to copy to clipboard
+super + semicolon
+  dmenuunicode
 # Sysact script to lock, restart, sleep, shutdown etc
 super + BackSpace
   sysact
