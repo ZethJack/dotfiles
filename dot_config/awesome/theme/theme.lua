@@ -257,14 +257,7 @@ theme.volume.widget:buttons(awful.util.table.join(
 
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
-local net = lain.widget.net({
-    settings = function()
-        widget:set_markup(markup.font(theme.font,
-                          markup("#7AC82E", " " .. net_now.received)
-                          .. " " ..
-                          markup("#46A8C3", " " .. net_now.sent .. " ")))
-    end
-})
+local nettraf = awful.widget.watch("sb-nettraf", 1)
 
 -- Separators
 local spr     = wibox.widget.textbox(' ')
@@ -355,7 +348,8 @@ function theme.at_screen_connect(s)
             -- bat.widget,
             arrl_ld,
             wibox.container.background(neticon, theme.bg_focus),
-            wibox.container.background(net.widget, theme.bg_focus),
+            wibox.container.background(nettraf, theme.bg_focus),
+            wibox.container.background(spr, theme.bg_focus),
             arrl_dl,
             clock,
             spr,
