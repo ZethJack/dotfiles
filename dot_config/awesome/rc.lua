@@ -94,7 +94,7 @@ local browser      = "librewolf"
 
 awful.util.terminal = terminal
 -- awful.util.tagnames = { "1", "2", "3", "4", "5" }
-awful.util.tagnames = { "", "", "", "", "5", "6", "7", "8", "9" }
+awful.util.tagnames = { "", "", "", "", "5", "6", "7", "8", "9" }
 awful.layout.layouts = {
     --awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -675,11 +675,11 @@ awful.rules.rules = {
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
     { rule = { class = "LibreWolf" },
-      properties = { screen = s, tag = "2"  } },
+      properties = { screen = s, tag = ""  } },
     { rule = { class = "discord" },
-      properties = { screen = s, tag = "3"  } },
+      properties = { screen = s, tag = ""  } },
     {rule = { class = "Steam" },
-      properties = { screen = s, tag = "4" } },
+      properties = { screen = s, tag = "" } },
 }
 
 -- }}}
