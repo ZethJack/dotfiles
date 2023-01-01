@@ -31,7 +31,7 @@ super + BackSpace
 
 #Web browser
 super {_, shift +} w
-  {librewolf, alacritty -e sudo nmtui}
+  {brave, alacritty -e sudo nmtui}
 
 # Email and abook
 super {_, shift + }e

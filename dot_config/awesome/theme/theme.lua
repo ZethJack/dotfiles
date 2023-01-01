@@ -16,19 +16,19 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/theme"
-theme.wallpaper                                 = theme.dir .. "/wall.png"
+theme.wallpaper                                 = os.getenv("HOME") .. "/.local/share/wall.png"
 theme.font                                      = "Terminus 9"
-theme.fg_normal                                 = "#DDDDFF"
-theme.fg_focus                                  = "#EA6F81"
-theme.fg_urgent                                 = "#CC9393"
-theme.bg_normal                                 = "#1A1A1A"
-theme.bg_focus                                  = "#313131"
+theme.fg_normal                                 = "#FFA000"
+theme.fg_focus                                  = "#222222"
+theme.fg_urgent                                 = "#FFA000"
+theme.bg_normal                                 = "#222222"
+theme.bg_focus                                  = "#FFA000"
 theme.bg_urgent                                 = "#1A1A1A"
 theme.border_width                              = dpi(1)
 theme.border_normal                             = "#3F3F3F"
 theme.border_focus                              = "#7F7F7F"
-theme.border_marked                             = "#CC9393"
-theme.tasklist_bg_focus                         = "#1A1A1A"
+theme.border_marked                             = "#FFA000"
+theme.tasklist_bg_focus                         = "#FFA000"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
@@ -166,7 +166,7 @@ theme.mpd = lain.widget.mpd({
             mpdicon:set_image(theme.widget_music)
         end
 
-        widget:set_markup(markup.font(theme.font, markup("#EA6F81", artist) .. title))
+        widget:set_markup(markup.font(theme.font, markup("#DD8800", artist) .. title))
     end
 })
 
@@ -257,7 +257,12 @@ theme.volume.widget:buttons(awful.util.table.join(
 
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
-local nettraf = awful.widget.watch("sb-nettraf", 1)
+local nettraf = awful.widget.watch(
+    "sb-nettraf", 1,
+    function(widget, stdout)
+        widget:set_markup(" " .. markup.font(theme.font, stdout))
+    end
+)
 
 -- Separators
 local spr     = wibox.widget.textbox(' ')
@@ -318,44 +323,37 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             -- arrl_ld,
             layout = wibox.layout.fixed.horizontal,
-            -- wibox.container.background(keyboardlayout, theme.bg_focus),
+            -- keyboardlayout,
             spr,
-            -- wibox.container.background(mpdicon, theme.bg_focus),
+            -- mpdicon,
             theme.mpd,
             mpdicon,
             -- arrl_dl,
-            arrl_ld,
-            wibox.container.background(volicon, theme.bg_focus),
-            wibox.container.background(theme.volume.widget, theme.bg_focus),
-            arrl_dl,
+            volicon,
+            theme.volume.widget,
             -- arrl_ld,
-            -- wibox.container.background(mailicon, theme.bg_focus),
-            --wibox.container.background(theme.mail.widget, theme.bg_focus),
+            -- mailicon,
+            --theme.mail.widget,
             -- arrl_dl,
             memicon,
             mem.widget,
-            arrl_ld,
-            wibox.container.background(cpuicon, theme.bg_focus),
-            wibox.container.background(cpu.widget, theme.bg_focus),
-            arrl_dl,
+            cpuicon,
+            cpu.widget,
             tempicon,
             temp.widget,
             -- arrl_ld,
-            -- wibox.container.background(fsicon, theme.bg_focus),
-            --wibox.container.background(theme.fs.widget, theme.bg_focus),
+            -- fsicon,
+            --theme.fs.widget,
             -- arrl_dl,
             -- baticon,
             -- bat.widget,
-            arrl_ld,
-            wibox.container.background(neticon, theme.bg_focus),
-            wibox.container.background(nettraf, theme.bg_focus),
-            wibox.container.background(spr, theme.bg_focus),
-            arrl_dl,
+            neticon,
+            nettraf,
+            spr,
             clock,
             spr,
             wibox.widget.systray(),
-            arrl_ld,
-            wibox.container.background(s.mylayoutbox, theme.bg_focus),
+            s.mylayoutbox,
 
         },
     }

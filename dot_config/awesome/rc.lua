@@ -676,10 +676,14 @@ awful.rules.rules = {
     --   properties = { screen = 1, tag = "2" } },
     { rule = { class = "LibreWolf" },
       properties = { screen = s, tag = ""  } },
+    { rule = { class = "Brave" },
+      properties = { screen = s, tag = ""  } },
     { rule = { class = "discord" },
       properties = { screen = s, tag = ""  } },
     {rule = { class = "Steam" },
       properties = { screen = s, tag = "" } },
+    {rule = { class = "qTox" },
+      properties = { screen = s, tag = "" } },
 }
 
 -- }}}
