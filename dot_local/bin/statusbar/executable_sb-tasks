@@ -17,4 +17,4 @@ case $BLOCK_BUTTON in
 esac
 
 [ "$num" != "0(0)" ] &&
-	echo "🤖$num"
+	echo " $num"

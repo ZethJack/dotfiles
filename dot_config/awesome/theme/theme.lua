@@ -112,6 +112,13 @@ theme.cal = lain.widget.cal({
         bg   = theme.bg_normal
     }
 })
+-- TaskSpooler Notif
+local tspn = awful.widget.watch(
+    "sb-tasks", 10,
+    function(widget, stdout)
+        widget:set_markup(" " .. markup.font(theme.font, stdout))
+    end
+)
 
 -- Mail IMAP check
 local mailicon = wibox.widget.imagebox(theme.widget_mail)
@@ -324,10 +331,11 @@ function theme.at_screen_connect(s)
             -- arrl_ld,
             layout = wibox.layout.fixed.horizontal,
             -- keyboardlayout,
-            spr,
+            --spr,
             -- mpdicon,
             theme.mpd,
             mpdicon,
+            tspn,
             -- arrl_dl,
             volicon,
             theme.volume.widget,
