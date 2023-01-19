@@ -74,7 +74,7 @@ super {_, shift + }e
 
 # Open file manager
 super + r; {r,t}
-  {alacritty -e lfub, pcmanfm}
+  {alacritty -e lfub, thunar}
 
 # Launch htop
 super + shift + r
