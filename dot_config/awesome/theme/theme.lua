@@ -122,6 +122,12 @@ local tspn = awful.widget.watch(
 
 -- Mail IMAP check
 local mailicon = wibox.widget.imagebox(theme.widget_mail)
+local mail = awful.widget.watch(
+    "sb-mailbox", 60,
+    function(widget, stdout)
+        widget:set_markup(" " .. markup.font(theme.font, stdout))
+    end
+)
 --[[ commented because it needs to be set before use
 mailicon:buttons(my_table.join(awful.button({ }, 1, function () awful.spawn(mail) end)))
 theme.mail = lain.widget.imap({
@@ -336,6 +342,7 @@ function theme.at_screen_connect(s)
             theme.mpd,
             mpdicon,
             tspn,
+            mail,
             -- arrl_dl,
             volicon,
             theme.volume.widget,
