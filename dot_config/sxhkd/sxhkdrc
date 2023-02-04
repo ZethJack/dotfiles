@@ -88,10 +88,6 @@ super + i
 super + o
   comptoggle
 
-# Pause mpd & mpv
-super + {_, shift + }p
-  mpc {pause, pause ; pauseallmpv}
-
 super + {_, shift + }uacute
   mpc seek {-10, -60}
 
