@@ -1,10 +1,15 @@
 #!/bin/env bash
 
 clear
+# First unload any existing sinks and remap source to prevent duplicity
+pactl unload-module module-null-sink
+pactl unload-module module-remap-source
+# Create virtual source for microphone input
 pactl load-module module-remap-source source_name=mic
-pactl load-module module-null-sink sink_name=voip
-pactl load-module module-null-sink sink_name=music
-pactl load-module module-null-sink sink_name=desktop
+# Create virtual sinks to route audio through
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=voip channel_map=stereo
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=music channel_map=stereo
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=desktop channel_map=stereo
 
 echo -ne "
 ############################################
