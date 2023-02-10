@@ -21,6 +21,6 @@ run unclutter
 run ssh-agent
 run lxpolkit
 run xsettingsd
-# run pwsinks
+run pwsinks
 # run pw-rewire
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
