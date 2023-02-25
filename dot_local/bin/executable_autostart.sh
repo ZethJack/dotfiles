@@ -5,10 +5,10 @@ DPI=96
 xrandr --dpi "$DPI"
 
 function run {
-  if ! pgrep -f $1 ;
-  then
-    $@&
-  fi
+    if ! pgrep "$1" ;
+    then
+        "$@"&
+    fi
 }
 
 # Some adjustments to related to x
@@ -25,6 +25,8 @@ run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run sxhkd &
 # unclutter - hides mouse cursor when inactive
 run unclutter &
+# Run redshift - night time mode
+run redshift &
 # MPD
 run mpd ~/.config/mpd/mpd.conf &
 # Notification daemon
@@ -33,3 +35,4 @@ run dunst &
 run setbg &
 # Run compositor
 run picom -b &
+
