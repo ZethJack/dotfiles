@@ -1,0 +1,30 @@
+<!DOCTYPE patchbay>
+<patchbay name="default" version="0.4.1">
+ <items>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FL"/>
+   <input node="Vnitřní zvukový systém Analogové stereo" port="CX20590 Analog:playback_FL"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="Vnitřní zvukový systém Analogové stereo" port="CX20590 Analog:playback_FR"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FL"/>
+   <input node="Vnitřní zvukový systém Analogové stereo" port="CX20590 Analog:playback_FL"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FR"/>
+   <input node="Vnitřní zvukový systém Analogové stereo" port="CX20590 Analog:playback_FR"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FR"/>
+   <input node="Vnitřní zvukový systém Analogové stereo" port="CX20590 Analog:playback_FR"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="Vnitřní zvukový systém Analogové stereo" port="CX20590 Analog:playback_FL"/>
+  </item>
+ </items>
+</patchbay>
+
