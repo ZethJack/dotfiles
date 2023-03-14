@@ -1,0 +1,13 @@
+rule = {
+  matches = {
+    {
+      {{ if eq .chezmoi.hostname "hashbrown" -}}
+      { "device.name" , "equals", "alsa_card.usb-Sonix_Technology_Co.__Ltd._USB_2.0_Camera_SN0001-02" },
+      {{ end -}}
+    },
+  },
+  apply_properties = {
+    ["device.disabled"] = true,
+  },
+}
+table.insert(alsa_monitor.rules,rule)
