@@ -1,11 +1,8 @@
+{{- if eq chezmoi.hostname "hashbrown" -}}
 rule = {
   matches = {
     {
-      {{ if eq .chezmoi.hostname "hashbrown" -}}
       { "device.name" , "equals", "alsa_card.usb-Sonix_Technology_Co.__Ltd._USB_2.0_Camera_SN0001-02" },
-      {{ else if eq .chezmoi.hostname "potatOS" -}}
-      { "device.name" , "libcamera_device.\_SB_.PCI0.EHC2.URTH.URMH.PRTD-1.6:1.0-04f2:b217" }
-      {{- end }}
     },
   },
   apply_properties = {
@@ -13,3 +10,4 @@ rule = {
   },
 }
 table.insert(alsa_monitor.rules,rule)
+{{ end -}}
