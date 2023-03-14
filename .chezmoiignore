@@ -1,2 +1,5 @@
 README.org
 LICENSE
+{{ if ne .chezmoi.hostname "hashbrown" }}
+.config/wireplumber/main.lua.d/51-disable-gpu.lua
+{{ end }}
