@@ -1,11 +1,7 @@
 rule = {
   matches = {
     {
-      {{ if eq .chezmoi.hostname "hashbrown" }}
       { "node.name" , "equals", "alsa_output.pci-0000_00_1b.0.analog-stereo" },
-      {{ else if eq .chezmoi.hostname "potatOS" }}
-      { "node.name", "equals", "alsa_output.pci-0000_00_1b.0.analog-stereo" },
-      {{ end -}}
     },
   },
   apply_properties = {
