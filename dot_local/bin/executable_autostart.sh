@@ -35,4 +35,6 @@ run dunst &
 run setbg &
 # Run compositor
 run picom -b &
-
+# Create virtual audio devices and route audio through them
+run pwsinks &
+run qpwgraph -max ~/.config/qpwgraph/default.qpwgraph &

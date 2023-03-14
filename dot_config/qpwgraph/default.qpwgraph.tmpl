@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.hostname "hashbrown" }}
+{{ include "dot_config/qpwgraph/default.qpwgraph_hashbrown" }}
+{{ end }}
+{{ if eq .chezmoi.hostname "potatOS" }}
+{{ include "dot_config/qpwgraph/default.qpwgraph_potatOS" }}
+{{ end }}
