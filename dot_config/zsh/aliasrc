@@ -59,7 +59,7 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	yt="yt-dlp --add-metadata -i --extractor-args youtube:player_client=android --sponsorblock-remove sponsor,selfpromo,interaction" \
+	yt='yt-dlp --add-metadata -i --extractor-args "youtube:player_client=android" --external-downloader aria2c:"-c -j 3 -x 3 -s 3 -k 1M" --sponsorblock-remove sponsor,selfpromo,interaction'\
 	yta='yt -x -f bestaudio/best --audio-format opus -o "%(title)s.%(ext)s"' \
 	ffmpeg="ffmpeg -hide_banner" \
 	tat="tmux a || tmux"
@@ -67,6 +67,7 @@ alias \
 # Colorize commands when possible.
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
 	wget='wget -c'
@@ -103,4 +104,4 @@ alias \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
 	cfg="cd $HOME/.local/share/chezmoi" \
 	yay="paru"\
-	pod='tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format opus --extractor-args youtube:player_client=android --sponsorblock-remove sponsor,selfpromo,interaction -P ~/Sync/podcast'
+	pod='tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format opus --extractor-args "youtube:player_client=android" --external-downloader aria2c:"-c -j 3 -x 3 -s 3 -k 1M" --sponsorblock-remove sponsor,selfpromo,interaction -P ~/Sync/podcast'

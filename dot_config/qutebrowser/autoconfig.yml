@@ -10,9 +10,21 @@ settings:
     global:
       normal:
         Xd: hint links spawn tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format
-          opus --extractor-args youtube:player_client=android --sponsorblock-remove
-          sponsor,selfpromo,interaction -P ~/Sync/podcast {hint-url}
+          opus --extractor-args youtube:player_client=android --external-downloader
+          aria2c:'-c -j 3 -x 3 -s 3 -k 1M' --sponsorblock-remove sponsor,selfpromo,interaction
+          -P ~/Sync/podcast {hint-url}
         Xp: hint links spawn --detach umpv {hint-url}
+  bindings.key_mappings:
+    global:
+      <Ctrl-6>: <Ctrl-^>
+      <Ctrl-Enter>: <Ctrl-Return>
+      <Ctrl-I>: <Tab>
+      <Ctrl-J>: <Return>
+      <Ctrl-M>: <Return>
+      <Ctrl-[>: <Escape>
+      <Enter>: <Return>
+      <Shift-Enter>: <Return>
+      <Shift-Return>: <Return>
   content.autoplay:
     global: false
   content.blocking.adblock.lists:
