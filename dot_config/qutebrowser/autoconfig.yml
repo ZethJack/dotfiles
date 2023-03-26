@@ -13,7 +13,7 @@ settings:
           opus --extractor-args youtube:player_client=android --external-downloader
           aria2c:'-c -j 3 -x 3 -s 3 -k 1M' --sponsorblock-remove sponsor,selfpromo,interaction
           -P ~/Sync/podcast {hint-url}
-        Xp: hint links spawn --detach umpv {hint-url}
+        Xp: hint links spawn --detach mpv --no-ytdl {hint-url}
   bindings.key_mappings:
     global:
       <Ctrl-6>: <Ctrl-^>
