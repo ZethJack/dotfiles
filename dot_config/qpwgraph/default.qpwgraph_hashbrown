@@ -1,125 +1,157 @@
 <!DOCTYPE patchbay>
-<patchbay version="0.3.9" name="default">
+<patchbay name="default" version="0.4.1">
  <items>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FR" node="music Audio/Sink sink"/>
-   <input port="Headphones:playback_FR" node="Headphones"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="Headphones" port="Headphones:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FR" node="voip Audio/Sink sink"/>
-   <input port="Headphones:playback_FR" node="Headphones"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="Speakers" port="Speakers:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FL" node="voip Audio/Sink sink"/>
-   <input port="Headphones:playback_FL" node="Headphones"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="Headphones" port="Headphones:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FL" node="desktop Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FL" node="Built-in Audio Analog Stereo"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="OBS [(Music) VM AUX Input]" port="OBS:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FR" node="voip Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FR" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FR"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FR" node="music Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FR" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FR"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FL" node="music Audio/Sink sink"/>
-   <input port="Speakers:playback_FL" node="Speakers"/>
+   <output node="Brave" port="Brave:output_FR"/>
+   <input node="default Audio/Sink sink" port="default Audio/Sink sink:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FR" node="music Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FR" node="Built-in Audio Analog Stereo"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="OBS [(Music) VM AUX Input]" port="OBS:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FR" node="music Audio/Sink sink"/>
-   <input port="Speakers:playback_FR" node="Speakers"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FL"/>
+   <input node="Speakers" port="Speakers:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FL" node="desktop Audio/Sink sink"/>
-   <input port="Headphones:playback_FL" node="Headphones"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FL" node="voip Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FL" node="Built-in Audio Analog Stereo"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FL"/>
+   <input node="OBS [(Desktop) Desktop Sink]" port="OBS:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FL" node="music Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FL" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FL"/>
+   <input node="Speakers" port="Speakers:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="default Audio/Sink sink:monitor_FL" node="default Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FL" node="Built-in Audio Analog Stereo"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FR"/>
+   <input node="OBS [(VoIP)]" port="OBS:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FR" node="voip Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FR" node="Built-in Audio Analog Stereo"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FR"/>
+   <input node="OBS [(Desktop) Desktop Sink]" port="OBS:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FR" node="voip Audio/Sink sink"/>
-   <input port="Speakers:playback_FR" node="Speakers"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FL" node="voip Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FL" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="default Audio/Sink sink" port="default Audio/Sink sink:monitor_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FL" node="music Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FL" node="Built-in Audio Analog Stereo"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="default Audio/Sink sink:monitor_FL" node="default Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FL" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="Speakers" port="Speakers:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FR" node="desktop Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FR" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FL"/>
+   <input node="OBS [(Music) Music audio sink]" port="OBS:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="default Audio/Sink sink:monitor_FR" node="default Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FR" node="Built-in Audio Analog Stereo"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FR"/>
+   <input node="Headphones" port="Headphones:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="voip Audio/Sink sink:monitor_FL" node="voip Audio/Sink sink"/>
-   <input port="Speakers:playback_FL" node="Speakers"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FR"/>
+   <input node="Headphones" port="Headphones:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FR" node="desktop Audio/Sink sink"/>
-   <input port="Headphones:playback_FR" node="Headphones"/>
+   <output node="Brave" port="Brave:output_FL"/>
+   <input node="default Audio/Sink sink" port="default Audio/Sink sink:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="default Audio/Sink sink:monitor_FR" node="default Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FR" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FL"/>
+   <input node="OBS [(VoIP)]" port="OBS:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="Brave:output_FR" node="Brave"/>
-   <input port="default Audio/Sink sink:playback_FR" node="default Audio/Sink sink"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FL"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FL" node="desktop Audio/Sink sink"/>
-   <input port="Speakers:playback_FL" node="Speakers"/>
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FR" node="desktop Audio/Sink sink"/>
-   <input port="Speakers:playback_FR" node="Speakers"/>
+   <output node="default Audio/Sink sink" port="default Audio/Sink sink:monitor_FR"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FR" node="desktop Audio/Sink sink"/>
-   <input port="CX20642 Analog:playback_FR" node="Built-in Audio Analog Stereo"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="Brave:output_FL" node="Brave"/>
-   <input port="default Audio/Sink sink:playback_FL" node="default Audio/Sink sink"/>
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FR"/>
+   <input node="Speakers" port="Speakers:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="music Audio/Sink sink:monitor_FL" node="music Audio/Sink sink"/>
-   <input port="Headphones:playback_FL" node="Headphones"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FR"/>
+   <input node="Speakers" port="Speakers:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output port="desktop Audio/Sink sink:monitor_FL" node="desktop Audio/Sink sink"/>
-   <input port="HyperX Virtual Surround Sound:playback_FL" node="HyperX 7.1 Audio Analog Stereo"/>
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FL"/>
+   <input node="Headphones" port="Headphones:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="default Audio/Sink sink" port="default Audio/Sink sink:monitor_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="music Audio/Sink sink" port="music Audio/Sink sink:monitor_FR"/>
+   <input node="OBS [(Music) Music audio sink]" port="OBS:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FL"/>
+   <input node="Headphones" port="Headphones:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="voip Audio/Sink sink" port="voip Audio/Sink sink:monitor_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="CX20642 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="desktop Audio/Sink sink" port="desktop Audio/Sink sink:monitor_FL"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="default Audio/Sink sink" port="default Audio/Sink sink:monitor_FL"/>
+   <input node="HyperX 7.1 Audio Analog Stereo" port="HyperX Virtual Surround Sound:playback_FL"/>
   </item>
  </items>
 </patchbay>
