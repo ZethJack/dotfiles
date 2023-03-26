@@ -5,7 +5,7 @@
 base="$(basename "$1")"
 notify-send "⏳ Queuing $base..."
 cmd="$2"
-[ -z "$cmd" ] && cmd="yt-dlp --add-metadata -ic --sponsorblock-remove sponsor,selfpromo,interaction"
+[ -z "$cmd" ] && cmd="yt-dlp --add-metadata -ic --external-downloader aria2c:-c -j 3 -x 3 -s 3 -k 1M --sponsorblock-remove sponsor,selfpromo,interaction"
 idnum="$(tsp $cmd "$1")"
 realname="$(echo "$base" | sed "s/?\(source\|dest\).*//;s/%20/ /g")"
 tsp -D "$idnum" mv "$base" "$realname"
