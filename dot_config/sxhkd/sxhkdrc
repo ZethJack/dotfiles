@@ -17,6 +17,10 @@ Print
 shift + Print
   maimpick
 
+# Show what's in clipboard
+super + Insert
+  notify-send "📋 Clipboard contents:" "$(xclip -o -selection clipboard)"
+
 #Restart sxhkd
 super + shift + x
   pkill -USR1 -x sxhkd && notify-send "Sxhkd config" "Reloaded."
