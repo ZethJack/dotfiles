@@ -17,6 +17,17 @@ Print
 shift + Print
   maimpick
 
+super + Print
+  dmenurecord
+
+super + shift + Print
+  dmenurecord kill
+
+super + Delete
+  dmenurecord kill
+
+super + ScorllLock
+  pkill screenkey || screenkey &
 # Show what's in clipboard
 super + Insert
   notify-send "📋 Clipboard contents:" "$(xclip -o -selection clipboard)"
