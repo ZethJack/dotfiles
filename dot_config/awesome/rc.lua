@@ -677,6 +677,8 @@ awful.rules.rules = {
       properties = { screen = s, tag = ""  } },
     { rule = { class = "discord" },
       properties = { screen = s, tag = ""  } },
+    { rule = { class = "WebCord" },
+      properties = { screen = s, tag = ""  } },
     {rule = { class = "Steam" },
       properties = { screen = s, tag = "" } },
     {rule = { class = "qTox" },
