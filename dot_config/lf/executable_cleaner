@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# if [ -n "$FIFO_UEBERZUG" ]; then
-# 	printf '{"action": "remove", "identifier": "PREVIEW"}\n' > "$FIFO_UEBERZUG"
-# fi
-kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
+#!/bin/sh
+if [ -n "$FIFO_UEBERZUG" ]; then
+	printf '{"action": "remove", "identifier": "PREVIEW"}\n' > "$FIFO_UEBERZUG"
+fi
