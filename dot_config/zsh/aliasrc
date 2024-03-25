@@ -59,7 +59,7 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	yt='yt-dlp --add-metadata -i --extractor-args "youtube:player_client=android" --external-downloader aria2c:"-c -j 3 -x 3 -s 3 -k 1M" --sponsorblock-remove sponsor,selfpromo,interaction'\
+	yt='yt-dlp --add-metadata -i --external-downloader aria2c:"-c -j 3 -x 3 -s 3 -k 1M" --sponsorblock-remove sponsor,selfpromo,interaction'\
 	yta='yt -x -f bestaudio/best --audio-format opus -o "%(title)s.%(ext)s"' \
 	ffmpeg="ffmpeg -hide_banner" \
 	tat="tmux a || tmux"
@@ -97,11 +97,11 @@ lazyg() {
 }
 
 alias \
-	lf="lfub" \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
 	cfg="cd $HOME/.local/share/chezmoi" \
 	yay="paru"\
-	pod='tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format opus --extractor-args "youtube:player_client=android" --external-downloader aria2c:"-c -j 3 -x 3 -s 3 -k 1M" --sponsorblock-remove sponsor,selfpromo,interaction -P ~/Sync/podcast'
+	pod="tsp yt-dlp --add-metadata -xic -f bestaudio/best --audio-format opus --extractor-args "youtube:player_client=android" --external-downloader=aria2c --external-downloader-args "-c -j 3 -x 3 -s 3 -k 1M"
+  --sponsorblock-remove sponsor,selfpromo,interaction -P ~/Sync/podcast"
